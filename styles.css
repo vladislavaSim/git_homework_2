@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body {
-    padding: 15px;
+    padding: 0 15px;
 }
 body.modal-active {
     /* @todo */
@@ -410,16 +410,13 @@ nav {
     color: #FB8F1D;
 }
 footer {
-    width: 100%;
     background: #F9F9FB;
-    position: absolute;
-    z-index: 5;
-    left: 0;
     padding: 0 15px;
+    margin: -15px -15px;
 }
 .footer-inner {
     max-width: 1220px;
-    margin: 0 auto 30px;
+    margin: 0 auto;
     display: flex;
     padding: 70px 0 80px;
     font-family: Mulish;
@@ -476,9 +473,10 @@ footer {
 }
 .footer-social-media {
     max-width: 248px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     margin: 0 auto;
 }
 
