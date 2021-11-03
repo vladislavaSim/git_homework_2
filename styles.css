@@ -1,0 +1,726 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 15px;
+}
+body.modal-active {
+    /* @todo */
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+#shadow {
+    /* @todo */
+    display: none;
+}
+#shadow.active {
+    /* @todo */
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+header {
+    height: 60px;
+    max-width: 1300px;
+    margin: 35px auto 110px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    width: 41px;
+    height: 41px;
+}
+nav {
+    display: flex;
+    align-items: flex-start;
+}
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 34px;
+}
+.nav-item {
+    padding-left: 34px;
+    list-style: none;
+}
+.nav-item a {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color:#B8BECD;
+}
+.nav-item a:hover {
+    color: black;
+}
+.nav-item:first-child {
+    padding-left: 0;
+}
+.nav-item .menu-burger-btn {
+    /* @todo */
+    margin-left: 0;
+    cursor: pointer;
+}
+.nav-item.hide {
+    display: none;
+}
+.header-right {
+    display: flex;
+    min-width: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+#account-burger-btn,
+.menu-burger-btn {
+    /* background: transparent;
+    border: none; */
+    width: 40px;
+    height: 35px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: relative;
+    display: block;
+}
+.account {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 282px;
+}
+.account button {
+    width: 132px;
+    height: 44px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Inter;
+}
+.nav-burger {
+    display: flex;
+}
+
+.login {
+    border: 1px solid #FB8F1D;
+    color: #FB8F1D;
+    background: white;
+}
+.register {
+    background: #FB8F1D;
+    color: white;
+    border: none;
+}
+.heading {
+    max-width: 1300px;
+    margin: 0 auto 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.heading-box {
+    margin-right: 20px;
+}
+.heading-box-title {
+    max-width: 370px;
+    font-family: Playfair Display;
+    font-size: 64px;
+    font-weight: 700;
+    margin: 0 0 74px;
+    color: #202336;
+}
+.heading-box-text {
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 600;
+    color: #202336;
+    margin-bottom: 33px;
+}
+.heading-box-button {
+    width: 187px;
+    height: 52px;
+    background-color: #FB8F1D;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Mulish;
+    font-size: 17px;
+    font-weight: 700;
+}
+.heading-img-box {
+    width: 50%;
+    max-width: 100%;
+}
+.section2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 298px;
+    max-width: 1272px;
+    padding: 0 15px;
+}
+.section2-img {
+    margin-right: 30px;
+}
+.section2-inner-title {
+    font-family: Playfair Display;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000;
+    max-width: 481px;
+    margin: 96px auto 20px;
+}
+.section2-inner-text {
+    font-family: Mulish;
+    font-size: 17px;
+    font-weight: 300;
+    max-width: 450px;
+    color: #7D7987;
+    margin: 0 0 33px;
+}
+.section2-inner-button {
+    width: 164px;
+    height: 48px;
+    background-color: #FB8F1D;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+}
+.destinations {
+    max-width: 1150px;
+    padding: 0 15px;
+    margin: 0 auto 15%;
+}
+
+.destinations-head {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 56px;
+}
+.destinations-title {
+    font-family: Playfair Display;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 50px;
+    color: black;
+    margin: 0;
+}
+.destinations-more {
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 60px;
+    color: #FB8F1D;
+}
+.destinations-inner {
+    display: flex;
+    justify-content: space-between;
+}
+.destinations-item {
+    position: relative;
+}
+.destinations-item img {
+    width: 261px; 
+    height: 332px;
+    margin-right: 5px;
+}
+.destinations-item img:last-child {
+    margin: 0;
+}
+.destinations-desc {
+    width: 120px;
+    height: 56px;
+    position: absolute;
+    bottom: 3px;
+    left: -1px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+.destinations-desc-place {
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #042521;
+    margin: 0;
+}
+.destinations-desc-country {
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #7D7987;
+    margin: 0;
+}
+.guides {
+    max-width: 1210px;
+    padding: 0 15px;
+    margin: 0 auto 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.guides-img {
+    max-width: 100%;
+}
+.testimonials {
+    max-width: 1201px;
+    padding: 0 15px;
+    margin: 0 auto 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.testimonials-title {
+    font-family: Playfair Display;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 50px;
+    color: black;
+    margin: 0 0 145px;
+}
+.rating {
+    display: flex;
+    width: 180px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.testimonials-quote {
+    max-width: 450px;
+    font-family: Mulish;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    margin: 0 0 40px;
+}
+.testimonials-name {
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 48px;
+    margin: 0;
+}
+.testimonials-workplace {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 48px;
+    color: #000000D9;
+    margin: 0;
+}
+.testimonials-img {
+    width: 384px;
+    position: relative;
+    max-width: 100%;
+}
+.testimonials-img::before {
+    content: '';
+    background-image: url(./img/element.png);
+    position: absolute;
+    bottom: -13px;
+    left: -15px;
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+.testimonials-img::after {
+    content: '';
+    background-image: url(./img/element2.png);
+    position: absolute;
+    top: -13px;
+    right: -15px;
+    display: block;
+    width: 42px;
+    height: 42px;
+    z-index: -10;
+}
+
+.trending {
+    max-width: 1262px;
+    padding: 0 15px;
+    margin: 0 auto 10%;
+}
+.trending-blogs {
+    display: flex;
+    justify-content: space-between;
+}
+.trending-item {
+    width: 260px;
+    margin-right: 10px;
+}
+.trending-item:last-child{
+    margin-right: 0;
+}
+.trending-img{
+    width: 100%;
+    height: 230px;
+    background-size: cover;
+    margin: 0 0 10px;
+}
+.trending-img1 {
+    background-image: url(img/image\ 12.png);
+}
+.trending-img2 {
+    background-image: url(img/image\ 13.png);
+}
+.trending-img3 {
+    background-image: url(img/image\ 14.png);
+}
+.trending-img4 {
+    background-image: url(img/image\ 15.png);
+}
+.trending-title {
+    font-family: Inter;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0 0 13px;
+}
+.trending-text {
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #7D7987;
+    margin: 0 0 23px;
+}
+.trending-link {
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 600;
+    color: #FB8F1D;
+}
+footer {
+    width: 100%;
+    background: #F9F9FB;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    padding: 0 15px;
+}
+.footer-inner {
+    max-width: 1220px;
+    margin: 0 auto 30px;
+    display: flex;
+    padding: 70px 0 80px;
+    font-family: Mulish;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #C4C4C4;
+}
+.footer-columns {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    margin-right: 5%;
+}
+.footer-logo {
+    width: 44px;
+    height: 44px;
+    margin: 0 0 26px;
+}
+.footer-desc {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #848484;
+    margin: 0 0 55px;
+    max-width: 391px;
+}
+.footer-copyright {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #848484;
+}
+.footer-section {
+    margin-right: 15px;
+}
+
+.footer-title {
+    font-family: Mulish;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 60px;
+    margin: 0 0 10px;
+}
+.footer-list {
+    font-family: Mulish;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 38px;
+    list-style: none;
+    padding: 0;
+}
+.footer-list a {
+    color: #848484;
+}
+.footer-social-media {
+    max-width: 248px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0 auto;
+}
+
+
+
+@media screen and (max-width: 1130px) {
+    .testimonials {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    .testimonials-inner{
+        margin-bottom: 20px;
+    }
+    .destinations-inner {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .destinations-item {
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 1100px) {
+ .footer-inner{
+        flex-flow: column;
+        align-items: center;
+    }
+    .footer-columns {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 795px) {
+    .menu-burger-btn {
+        display: none;
+    }
+    .nav-list {
+        padding-left: 10px;
+    }
+}
+@media screen and (max-width: 795px) {
+    .nav-list {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        background: white;
+
+        /*width: 100%; @todo */
+        width: 50vw;
+        min-width: 250px;
+
+        padding: 0 25px 0 20px;
+        position: fixed;
+
+        top: 0;
+        /*top: 105px; @todo */
+
+        /*right: -100%; @todo */
+        right: -100vw;
+
+        transition: all 0.4s ease-in-out;
+        margin-top: 0;
+
+        height: 100vh; /* @todo  */
+        margin-right: 0; /* @todo */
+        margin-bottom: 0; /* @todo */
+        z-index: 10; /* @todo */
+    }
+    .nav-list.open-menu {
+        /*right: -18px; @todo */
+        right: 0;
+    }
+    .nav-item {
+        padding: 20px 0;
+    }
+    .nav-item a {
+        font-size: 20px;
+    }
+    .nav-item.hide {
+        display: flex;
+        min-height: 150px;
+    }
+    .nav-item.hide .account {
+        flex-direction: column;
+    }
+
+    .menu-burger-btn {
+        display: flex;
+        margin: 0 15px;
+    }
+    .menu-burger-btn::before,
+    .menu-burger-btn::after {
+        content: '';
+    }
+    .menu-burger-btn span,
+    .menu-burger-btn::before,
+    .menu-burger-btn::after {
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: #202336;
+        margin: 0 auto;
+    }
+    .menu-burger-btn span {
+        top: 14px;
+    }
+    .menu-burger-btn::before {
+        top: 0;
+    }
+    .menu-burger-btn::after {
+        bottom: 5px;
+    }
+    .menu-burger-btn.open-menu span {
+        opacity:0; 
+        transition: 0.5s; 
+    }
+    .menu-burger-btn.open-menu:before {
+        transform: rotate(45deg);
+        top: 16px;
+        transition: 0.4s;
+    }
+    .menu-burger-btn.open-menu:after {
+        transform: rotate(-45deg);
+        bottom: 16px;
+        transition: 0.4s;
+    }
+    .header-right .account {
+        display: none;
+    }
+    header {
+        margin-bottom: 0;
+    }
+    header div {
+        display: inline;
+    }
+    .body {
+        padding-top: 70px; /* @todo */
+    }
+    header {
+        /* @todo */
+        height: auto;
+        position: fixed;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        top: 0;
+        margin-top: 0;
+        padding: 15px 30px;
+        z-index: 3;
+    }
+    .heading-box {
+        margin: 30px 0;
+    }
+    .heading-box-title {
+        margin-top: 25px;
+        font-size: 55px;
+        text-align: center;
+    }
+    .heading-box-text, 
+    .section2-inner-text,
+    .section2-inner-title,
+    .destinations-title,
+    .testimonials-title {
+        text-align: center;
+    }
+    .section2-inner-title {
+        margin-top: 15px;
+    }
+    .trending-blogs, .footer-inner{
+        flex-flow: wrap column;
+        align-items: center;
+    }
+    .destinations-inner,
+    .trending-blogs {
+        align-items: center;
+    }
+    .trending-item {
+        margin-bottom: 25px;
+    }
+    .guides-inner {
+        width: 100%;
+    }
+    .section2-inner-button, .heading-box-button {
+        margin: 0 auto;
+    }
+    .footer-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-inner {
+        padding-top: 10px;
+        padding-bottom: 15px;
+        margin-bottom: 10px;
+    }
+    .heading-box, .guides-inner, .trending
+    , .testimonials, .testimonials-title, 
+    .destinations, .section2, .heading {
+        margin-bottom: 20px;
+    }
+    .footer-desc {
+        width: 100%;
+    }
+    .footer-title {
+        line-height: 0;
+    }
+    .footer-copyright {
+        margin-bottom: 30px;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    .burger-icon.user-icon {
+        display: flex;
+        margin: 0 15px;
+    }
+
+    .heading, .section2, .guides{
+      flex-flow: wrap column;
+    }
+
+    .heading-img-box, .footer-logo {
+      display: none;
+    }
+    .testimonials-quote {
+      font-size: 18px;
+    }
+    .heading-box-title, .destinations-head {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .destinations-head,
+    .footer-columns {
+    display: block;
+    }
+}
+@media screen and (max-width: 390px) {
+    .destinations-item img{
+        width: auto;
+        height: auto;
+    }
+}
