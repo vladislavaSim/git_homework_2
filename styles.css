@@ -487,6 +487,9 @@ footer {
     header {
         margin-top: 55px;
     }
+    .section2 {
+        margin-bottom: 20%;
+    }
 }
 @media screen and (max-width: 1130px) {
     .testimonials {
