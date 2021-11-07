@@ -528,6 +528,9 @@ footer {
     }
 }
 @media screen and (max-width: 795px) {
+    body {
+        padding-top: 70px; /* @todo */
+    }
     .nav-list {
         display: flex;
         justify-content: flex-start;
@@ -621,9 +624,6 @@ footer {
     }
     header div {
         display: inline;
-    }
-    .body {
-        padding-top: 70px; /* @todo */
     }
     header {
         /* @todo */
