@@ -5,11 +5,13 @@ $(document).ready(function() {
         $('#shadow').toggleClass('active');
         $('body').toggleClass('modal-active');
     });
-});
 
-$(document).ready(function() {
     $('#account-burger-btn').click(function() {
         $('#account-burger-btn').toggleClass('open-menu');
         $('.account').toggleClass('open-menu');
+    });
+
+    $('.footer-title').click(function(event) {
+    $(this).next().toggleClass('active');
     });
 });
